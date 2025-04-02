@@ -52,7 +52,7 @@ bool ClapTrap::_checkPoints(void)
 
 void ClapTrap::attack(const std::string &target)
 {
-    if (!_checkPoints)
+    if (!_checkPoints())
         return;
     _energyPoints--;
     std::cout << "ClapTrap " << _name << " attacks " << target << ", causing ";
@@ -74,7 +74,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if (!_checkPoints())
         return;
-    _energyPoints--;
+    _energyPoints--;;
     std::cout << "Hit points are repaired by " << amount << std::endl;
     if (std::numeric_limits<unsigned int>::max() - amount <_hitPoints)
         _hitPoints = std::numeric_limits<unsigned int>::max();
