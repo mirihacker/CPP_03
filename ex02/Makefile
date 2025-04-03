@@ -1,6 +1,6 @@
-NAME = ScavTrap
+NAME = FragTrap
 SRC_DIR = ./src/
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
